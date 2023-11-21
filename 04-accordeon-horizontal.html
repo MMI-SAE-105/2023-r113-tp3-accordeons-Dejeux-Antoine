@@ -5,8 +5,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accordéon horizontal</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+      
   </head>
   <body>
+    <style>
+
+ul#accordeon {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* pour aligner les éléments horizontalement */
+}
+
+ul#accordeon li {
+  flex: 1; /* pour répartir l'espace équitablement */
+  margin: 10px;
+  overflow: hidden; /* pour masquer le contenu débordant */
+}
+
+ul#accordeon li figure {
+  margin: 0;
+  height: 200px;
+}
+
+
+
+/* Style au survol */
+ul#accordeon li:hover {
+  flex: 3; /* pour agrandir l'élément survolé */
+}
+
+    </style>
     <h1>Accordéon horizontal</h1>
+
+    <ul id="accordeon">
+      <li>
+        <figure>
+          <img src="https://picsum.photos/100?random=1" alt="" width="102">
+          <figcaption>
+            <h3>Lorem, ipsum dolor.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+          </figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img src="https://picsum.photos/100?random=2" alt="" width="102">
+          <figcaption>
+            <h3>Voluptas, repellat harum!</h3>
+            <p>Illum est nostrum vel sit nihil.</p>
+          </figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img src="https://picsum.photos/100?random=3" alt="" width="102">
+          <figcaption>
+            <h3>Eligendi, laboriosam a.</h3>
+            <p>Quisquam id cupiditate ullam consectetur aut.</p>
+          </figcaption>
+        </figure>
+      </li>
+    </ul>
   </body>
 </html>
