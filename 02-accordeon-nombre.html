@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Accordéon mémorisant par un nombre l'élèment ouvert</title>
-  </head>
-  <body>
-    <h1>Accordéon mémorisant par un nombre l'élèment ouvert</h1>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <title>Accordéon mémorisant par un nombre l'élèment ouvert</title>
+</head>
+
+<body>
+  <h1>Accordéon mémorisant par un nombre l'élèment ouvert</h1>
+  <div class="accordeon" x-data="{FirstDlIsOpen: false, TwoDlIsOpen: false,ThreeDlIsOpen: false}">
+    <section>
+      <button @click="FirstDlIsOpen = ! FirstDlIsOpen">bouton 1</button>
+      <div id="FristDl" x-show="FirstDlIsOpen" x-transition:enter.origin.top x-transition:leave.origin.top>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nulla saepe temporibus voluptatem ex tempora
+          excepturi, ab neque repudiandae! Ducimus itaque dolorum assumenda perferendis ipsam magnam necessitatibus
+          deserunt pariatur nam?</p>
+      </div>
+    </section>
+    <section>
+      <button aria-controls="TwoDl" @click="TwoDlIsOpen = ! TwoDlIsOpen">bouton 2</button>
+      <div id="TwoDl" x-show="TwoDlIsOpen" x-transition:enter.scale.80 x-transition:leave.scale.80>
+        <p>Molestiae veniam at non facere aliquid delectus commodi, aspernatur cum molestias iusto quia quod officiis
+          laudantium velit! Praesentium, dicta. Dicta tenetur consequatur officiis quo rem deserunt quod id ex
+          voluptate?</p>
+      </div>
+    </section>
+  
+  </div>
+</body>
+
 </html>
