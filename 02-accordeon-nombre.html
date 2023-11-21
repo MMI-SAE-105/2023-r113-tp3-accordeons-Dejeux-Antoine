@@ -28,7 +28,14 @@
           voluptate?</p>
       </div>
     </section>
-  
+    <section>
+      <button aria-controls="ThreeDl" @click="ThreeDlIsOpen = ! ThreeDlIsOpen  ">bouton 3</button>
+      <div id="ThreeDl" x-show="ThreeDlIsOpen" x-transition:enter.scale.30 x-transition:leave.scale.30>
+        <p>Repellendus odit optio vitae, tempore repudiandae quod veniam nostrum reprehenderit facere similique, eveniet
+          voluptates inventore assumenda eligendi ullam! Odio eius perspiciatis id necessitatibus eos facilis itaque
+          doloremque quibusdam! Sit, minima?</p>
+      </div>
+    </section>
   </div>
 </body>
 
