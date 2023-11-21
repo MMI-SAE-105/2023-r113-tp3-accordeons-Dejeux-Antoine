@@ -16,13 +16,29 @@
 
 
   <div class="accordeon" x-data="{FirstDlIsOpen: false, TwoDlIsOpen: false,ThreeDlIsOpen: false}">
-
+    
     <section>
       <button @click="FirstDlIsOpen = ! FirstDlIsOpen">bouton 1</button>
       <div id="FristDl" x-show="FirstDlIsOpen" x-collapse.duration.1000ms>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nulla saepe temporibus voluptatem ex tempora
           excepturi, ab neque repudiandae! Ducimus itaque dolorum assumenda perferendis ipsam magnam necessitatibus
           deserunt pariatur nam?</p>
+      </div>
+    </section>
+    <section>
+      <button aria-controls="TwoDl" @click="TwoDlIsOpen = ! TwoDlIsOpen">bouton 2</button>
+      <div id="TwoDl" x-show="TwoDlIsOpen" x-collapse.duration.1000ms>
+        <p>Molestiae veniam at non facere aliquid delectus commodi, aspernatur cum molestias iusto quia quod officiis
+          laudantium velit! Praesentium, dicta. Dicta tenetur consequatur officiis quo rem deserunt quod id ex
+          voluptate?</p>
+      </div>
+    </section>
+    <section>
+      <button aria-controls="ThreeDl" @click="ThreeDlIsOpen = ! ThreeDlIsOpen  ">bouton 3</button>
+      <div id="ThreeDl" x-show="ThreeDlIsOpen" x-collapse.duration.1000ms>
+        <p>Repellendus odit optio vitae, tempore repudiandae quod veniam nostrum reprehenderit facere similique, eveniet
+          voluptates inventore assumenda eligendi ullam! Odio eius perspiciatis id necessitatibus eos facilis itaque
+          doloremque quibusdam! Sit, minima?</p>
       </div>
     </section>
   </div>
