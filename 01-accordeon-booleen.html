@@ -20,6 +20,18 @@
           deserunt pariatur nam?</p>
       </div>
     </section>
+
+    <section x-data="{TwoDlIsOpen: false}">
+      <button aria-controls="TwoDl" @click="TwoDlIsOpen = ! TwoDlIsOpen">bouton 2</button>
+      <div id="TwoDl" x-show="TwoDlIsOpen" x-transition:enter.duration.500ms x-transition:leave.duration.400ms>
+        <p>Molestiae veniam at non facere aliquid delectus commodi, aspernatur cum molestias iusto quia quod officiis
+          laudantium velit! Praesentium, dicta. Dicta tenetur consequatur officiis quo rem deserunt quod id ex voluptate?
+        </p>
+      </div>
+
+
+
+      
   </div>
 </body>
 
