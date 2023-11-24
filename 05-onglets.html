@@ -12,6 +12,7 @@
 
 <body>
 
+
   <h1>Onglets</h1>
   <div id="onglets" x-data="{ouvert : 1}">
     <div>
@@ -21,6 +22,31 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel placeat delectus asperiores
              consequatur libero, dolor amet ab quaerat aperiam nisi saepe quisquam, alias perferendis 
              eum ratione possimus, voluptatibus blanditiis porro!</p>
+          <ul role="tablist">
+            <li role="tab">Section 1</li>
+            <li role="tab">Section 2</li>
+            <li role="tab">Section 3</li>
+          </ul>
+        </div>
+      </div>
+      <div role="tabpanel" @click="ouvert = 2">
+        <button>Onglet 2</button>
+        <div x-show="ouvert === 2">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, voluptatem quaerat te
+            netur quas saepe itaque, veniam, explicabo culpa distinctio atque impedit id! Sequi 
+            provident cumque eum corporis. Adipisci, tenetur similique.</p>
+          <ul role="tablist">
+            <li role="tab">Section 1</li>
+            <li role="tab">Section 2</li>
+            <li role="tab">Section 3</li>
+          </ul>
+        </div>
+      </div>
+      <div role="tabpanel" @click="ouvert = 3">
+        <button>Onglet 3</button>
+        <div x-show="ouvert === 3">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium, quisquam? Assumenda quo, eaque neque, totam 
+            asperiores omnis odit modi eos eveniet ipsa aliquam dolorum autem aliquid sequi earum obcaecati? Voluptatum!</p>
           <ul role="tablist">
             <li role="tab">Section 1</li>
             <li role="tab">Section 2</li>
