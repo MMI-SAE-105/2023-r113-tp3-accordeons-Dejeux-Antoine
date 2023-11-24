@@ -12,6 +12,58 @@
 
 <body>
 
+<style>
+
+#onglets{
+    position: relative;
+    width: 100%;
+    margin-left: 20px;
+}
+#onglets p{
+    margin-top: 30px;
+}
+#onglets>div>div>ul,#onglets>div>div>p{
+    opacity: 0;
+}
+
+#onglets>div>div>ul.actif ,#onglets>div>div>p.actif {
+    opacity: 1;
+}
+
+#onglets button{
+    margin-top: 0;
+    text-align: left;
+    font-size: 20px;
+    line-height: 40px;
+    color: white;
+    background-color: blue;
+    margin-left: 0;
+    padding-left: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 2px;
+    font-weight: bold;
+}
+#onglets button:hover {
+    background-color: lightgray;
+}
+#onglets button:focus {
+    color:dimgrey ;
+    background-color: lightgray;
+}
+#onglets button:active {
+    background-color:lightgray;
+}
+#onglets>div>div>div{
+    margin-top: -30px;
+    width: calc(100% - 20px);
+    border: solid;
+    border-radius: 5px;
+    height: calc(100% + 20px);
+    margin-bottom: 10px;
+}
+
+</style>
 
   <h1>Onglets</h1>
   <div id="onglets" x-data="{ouvert : 1}">
